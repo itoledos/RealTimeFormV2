@@ -1,57 +1,45 @@
 import React, {useState} from 'react';
 
 const UserForm = (props) => {
-    const [username, setUsername] = useState("");
-    const [email,setEmail] = useState("");
-    const [password,setPassword] = useState("");
-    const [passwordConf,setPasswordConf] = useState("");
-
+    const {inputs, setInputs}= props;
+    
+    const onChange = (e) => {
+        setInputs({
+            ...inputs,
+            [e.target.name]: e.target.value
+        })
+    }
+    
     const createUser = (e) => {
         e.preventDefault();
-        const newUser = {username, email, password};
-        // console.log("Welcome", newUser);
+
     }
 
     return(
         <div>
             <form onSubmit={createUser}>
-                <div>
-                    <label>Username: </label>
-                    <input type="text" onChange={(e) => setUsername(e.target.value)} />
+                <div className='form-group'>
+                    <label htmlFor='firstName'>First Name: </label>
+                    <input type="text" name="firstName" onChange={onChange} />
                 </div>
-                <div>
-                    <label>Email Adress: </label>
-                    <input type="email" onChange={(e) => setEmail(e.target.value)} />
+                <div className='form-group'>
+                    <label htmlFor='lastName'>Last Name: </label>
+                    <input type="text" name="lastName" onChange={onChange} />
                 </div>
-                <div>
-                    <label>Password: </label>
-                    <input type="password" onChange={(e) => setPassword(e.target.value)} />
+                <div className='form-group'>
+                    <label htmlFor='email'>Email: </label>
+                    <input type="email" name="email" onChange={onChange} />
                 </div>
-                <div>
-                    <label>ConfirmPassword: </label>
-                    <input type="password" onChange={(e) => setPasswordConf(e.target.value)} />
+                <div className='form-group'>
+                    <label htmlFor='password'>Password: </label>
+                    <input type="password" name="password" onChange={onChange} />
+                </div>
+                <div className='form-group'>
+                    <label htmlFor='passwordConfirm'>Confirm Password: </label>
+                    <input type="password" name="passwordConfirm" onChange={onChange} />
                 </div>
                 <input type="submit" value="Create User" />
             </form>
-            <p>Your Form Data</p>
-            <table>
-                <tr>
-                    <td>First Name: </td>
-                    <td> {username} </td>
-                </tr>
-                <tr>
-                    <td>Email adress: </td>
-                    <td> {email} </td>
-                </tr>
-                <tr>
-                    <td>Password: </td>
-                    <td> {password} </td>
-                </tr>
-                <tr>
-                    <td>Confirm Password: </td>
-                    <td> {passwordConf} </td>
-                </tr>
-            </table>
         </div>
 
     )
