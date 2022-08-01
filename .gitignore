@@ -22,6 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+src/components/countbtn/
+src/components/filter/
 src/components/form/
+src/components/personcard/
 src/components/styledbox/
 ignore/
