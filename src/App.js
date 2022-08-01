@@ -5,7 +5,8 @@ import Results from './components/formularios/Results';
 
 function App() {
   const [state,setState] = useState({
-    username: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     passwordConfirm: ""
