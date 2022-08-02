@@ -7,26 +7,29 @@ const Results = (props) => {
         <div>
             <p>Your Form Data</p>
             <table>
-                <tr>
-                    <td>First Name: </td>
-                    <td> {firstName} </td>
-                </tr>
-                <tr>
-                    <td>Last Name: </td>
-                    <td> {lastName} </td>
-                </tr>
-                <tr>
-                    <td>Email adress: </td>
-                    <td> {email} </td>
-                </tr>
-                <tr>
-                    <td>Password: </td>
-                    <td> {password} </td>
-                </tr>
-                <tr>
-                    <td>Confirm Password: </td>
-                    <td> {passwordConfirm} </td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>First Name: </td>
+                        <td> {firstName} </td>
+                    </tr>
+                    <tr>
+                        <td>Last Name: </td>
+                        <td> {lastName} </td>
+                    </tr>
+                    <tr>
+                        <td>Email adress: </td>
+                        <td> {email} </td>
+                    </tr>
+                    <tr>
+                        <td>Password: </td>
+                        <td> {password} </td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password: </td>
+                        <td> {passwordConfirm} </td>
+                    </tr>
+                </tbody>
+
             </table>
         </div>
     )

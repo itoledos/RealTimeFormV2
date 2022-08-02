@@ -9,8 +9,16 @@ function App() {
     lastName: "",
     email: "",
     password: "",
-    passwordConfirm: ""
+    passwordConfirm: "",
+    hasBeenSubmitted: false,
+    firstNameAlert: true,
+    lastNameAlert: true,
+    emailAlert: true,
+    passAlert1: true,
+    passAlert2: true
   })
+
+  
 
   return (
     <div className="App">
